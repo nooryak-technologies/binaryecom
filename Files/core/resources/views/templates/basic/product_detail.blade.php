@@ -81,8 +81,8 @@
                                     <tbody>
                                         @foreach ($product->specifications as $specification)
                                             <tr>
-                                                <th>{{ $specification['name'] }}</th>
-                                                <td>{{ $specification['value'] }}</td>
+                                                <th>{{ @$specification['name'] ?? @$specification['title'] }}</th>
+                                                <td>{{ @$specification['value'] }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
