@@ -1,0 +1,36 @@
+# Ignore composer vendor and npm node_modules packages
+Files/core/vendor/
+Files/core/node_modules/
+Files/core/public/storage
+Files/core/storage/*.key
+Files/core/.env
+Files/core/.env.backup
+Files/core/.env.production
+Files/core/.phpunit.result.cache
+Files/core/Homestead.json
+Files/core/Homestead.yaml
+Files/core/auth.json
+Files/core/npm-debug.log
+Files/core/yarn-error.log
+Files/core/.fleet
+Files/core/.idea
+Files/core/.vscode
+
+# Ignore IDE settings and local configurations
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore configuration secrets and large backup zip files
+Files/assets/admin/push_config.json
+Files/assets.zip
+binaryecom.zip
