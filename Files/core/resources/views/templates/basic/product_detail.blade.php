@@ -63,14 +63,16 @@
                                 <h6 class="title">@lang('Category') :</h6>
                                 <a href="{{ route('products', $product->category_id) }}">{{ __($product->category->name) }}</a>
                             </li>
-                            <li class="meta-item">
-                                <h6 class="title">@lang('Tags') :</h6>
-                                <div>
-                                    @foreach ($product->meta_keyword as $keyword)
-                                        <a href="#0">{{ $keyword }}</a>
-                                    @endforeach
-                                </div>
-                            </li>
+                        @if($product->meta_keyword)
+                        <li class="meta-item">
+                            <h6 class="title">@lang('Tags') :</h6>
+                            <div>
+                                @foreach ($product->meta_keyword as $keyword)
+                                    <a href="#0">{{ $keyword }}</a>
+                                @endforeach
+                            </div>
+                        </li>
+                        @endif
                         </ul>
                         @if ($product->specifications)
                             <div class="specifications mt-3">
